@@ -69,7 +69,7 @@ def is_prime4(num: int) -> bool:
     if num == 2 or num == 3:
         return True
 
-    end = int(math.sqrt(num))
+    end = int(math.sqrt(num)) + 1
 
     if num % 2 == 0:
         return False
