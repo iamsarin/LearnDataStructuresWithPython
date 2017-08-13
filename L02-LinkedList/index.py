@@ -9,18 +9,14 @@ class LinkedList:
     first: Node = None
     last: Node = None
 
-    def __init__(self, node: Node = None):
-        if node is not None:
-            self.count = 1
-            self.current = None
-            self.first = node
-            self.last = node
+    def __init__(self, node=None):
+        self.count = 0
+        self.current = None
+        self.first = None
+        self.last = None
 
-        else:
-            self.count = 0
-            self.current = None
-            self.first = None
-            self.last = None
+        if node is not None:
+            self.copy(node)
 
     def initialize_list(self):
         self.destroy_list()
@@ -111,6 +107,7 @@ class LinkedList:
 
         while node_running is not None:
             if info == node_running.info:
+                self.count = self.count - 1
                 if node_before_running is None:
                     self.first = node_running.nextNode
                 else:
@@ -173,8 +170,7 @@ else:
     print('Result: my linked list does not has 90')
 print('_______________________________________________________')
 print('I want to copy my linked list to another that name AAA')
-AAA = LinkedList()
-AAA.copy(a)
+AAA = LinkedList(a)
 print('Now copy successful my AAA is')
 AAA.print()
 print('I want to add 90 to AAA, my AAA is')
@@ -186,28 +182,3 @@ print('My Linked List: ')
 a.print()
 print('AAA: ')
 AAA.print()
-
-exit()
-
-print('-----end-----')
-
-a.insert_first(58)
-a.insert_first(22)
-a.insert_first(21)
-a.insert_last(309)
-a.print()
-
-b = LinkedList()
-b.insert_first(50)
-b.insert_first(20)
-b.insert_first(30)
-b.insert_first(50)
-b.insert_first(20)
-print('B: ', end='')
-b.print()
-
-print('A: ', end='')
-a.print()
-a.copy(b)
-print('After Copy A: ', end='')
-a.print()
