@@ -157,17 +157,14 @@ class Queue(DoublyLinkedList):
         self.insert_last(info)
 
     def dequeue(self):
-        if self.last is None:
+        if self.first is None:
             return None
 
         self.count = self.count - 1
-        info = self.last.info
-        self.last = self.last.previousNode
-
-        if self.last is not None:
-            self.last.nextNode = None
-        else:
-            self.first = None
+        info = self.first.info
+        self.first = self.first.nextNode
+        if self.first is not None:
+            self.first.previousNode = None
         return info
 
     def print(self):
