@@ -46,7 +46,7 @@
   - กรณีสร้างด้วย Linked List สามารถใช้แบธรรมดา Single Linked List เพราะจะกระทำแค่ node แรกเท่านั้น 
 - **Queues**, สามารถสร้างขึ้นได้จาก Linked List และ Array
   - โครงสร้างข้อมูลแบบเข้าก่อน ออกก่อน **first in, first out** (FIFO)
-  - กรณีสร้างด้วย Linked List จะต้องสร้างแบบ Doubly linked list เพราะจะต้องยุ่งกับส่วนหางด้วย
+  - ~~กรณีสร้างด้วย Linked List จะต้องสร้างแบบ Doubly linked list เพราะจะต้องยุ่งกับส่วนหางด้วย~~
 
 #### Big O:
 | การกระทำ (Operation)                  | Linked List    |
